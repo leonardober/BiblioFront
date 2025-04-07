@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>📚 Gestión de Libros</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>📚 Biblioteca</h1>
+
+  <h2>🔎 Buscar libros por autor</h2>
+  <input type="text" id="busquedaAutor" placeholder="Nombre del autor">
+  <button onclick="buscarPorAutor()">Buscar</button>
+  <button onclick="obtenerLibros()">🔄 Mostrar todos</button>
+
+  <h2 id="modo">➕ Agregar nuevo libro</h2>
+  <form id="formLibro" autocomplete="off">
+    <input type="text" id="isbn" placeholder="ISBN" required>
+    <input type="text" id="titulo" placeholder="Título" required>
+    <input type="text" id="fechEdicion" placeholder="Fecha Edición">
+    <input type="number" id="numPaginas" placeholder="Páginas">
+    <input type="number" id="cantEjemplares" placeholder="Ejemplares">
+    <input type="number" id="cantEjemplaresDisponibles" placeholder="Disponibles">
+    <input type="text" id="sinopsis" placeholder="Sinopsis">
+    <input type="text" id="tipoPresentacion" placeholder="Presentación">
+    <input type="text" id="tipoLiteratura" placeholder="Tipo Literatura">
+    <input type="text" id="autorNombre" placeholder="Nombre del Autor">
+    <input type="text" id="autorApellidos" placeholder="Apellidos del Autor">
+    <input type="text" id="autorFechaPub" placeholder="Fecha de Publicación">
+    <input type="text" id="autorPremios" placeholder="Premios (separados por coma)">
+    <input type="text" id="autorFechaFallecimiento" placeholder="Fecha Fallecimiento">
+    <button type="submit">Guardar Libro</button>
+  </form>
+
+  
+    <h1>Lista de Libros</h1>
+    <ul id="listaLibros"></ul> <!-- sin guion medio -->
+
+
+    <script src="main.js"></script> <!-- ✅ Aquí va tu script -->
+
+
+</body>
+</html>
+
+
+
+<!--├── public/                    // Frontend
+│   ├── index.html            // Vista
+│   ├── main.js               // Lógica del cliente
+│   └── styles.css            // Estilos
+│
+├── controllers/              // Lógica de negocio del backend
+│   └── librosController.js
+├── models/                   // Esquemas de MongoDB
+│   └── Libro.js
+├── routes/                   // Rutas del backend
+│   └── librosRoutes.js
+├── config/                   // Configuración de la BD
+│   └── db.js
+│
+├── .env                      // Variables de entorno
+├── index.js                  // Entry point del servidor Express
+├── package.json              // Dependencias
+
+
+Funcionalidades implementadas:
+Crear libro ✅
+
+Leer todos los libros ✅
+
+Buscar por autor ✅
+
+Editar libro ✅
+
+Eliminar libro ✅
+-->
